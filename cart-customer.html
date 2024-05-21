@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="addtocart.css">
+    <script type="module" src="customer-cart.js" defer></script>
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <p class="logo">E-Spaza Hub</p>
+        <div class="user-info">
+            <span id="username-display">Welcome, User</span>
+            <button id="sign-out-button" class="sign-out">Sign Out</button>
+        </div>
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p id="count">0</p>
+        </div>
+    </div>
+    
+    <!-- Search bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <button id="searchButton"><i class="fas fa-search"></i></button>
+        <button id="resetButton">Reset</button>
+    </div>
+
+    <div class="container">
+        <div id="root"></div>
+        <div class="sidebar">
+            <div class="head"><p>My Cart</p></div>
+            <div id="cartItem">Your cart is empty</div>
+            <div class="total-container">
+                <h3>Total</h3>
+                <h2 id="total">R 0.00</h2>
+            </div>
+            <button id="place-order-button" class="golden-button">Place Order</button>
+            <div id="order-status"></div>
+            <!-- New button to check order status -->
+            <button id="check-order-status-button" class="golden-button">Check Order Status</button>
+
+            <div id="order-status-display" class="order-status-display">
+                <h3>Order Status</h3>
+                <p id="order-status-text">No orders placed yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalName"></h2>
+            <img id="modalImage" src="" alt="Product Image" />
+            <p id="modalDescription"></p>
+            <h3 id="modalPrice"></h3>
+        </div>
+    </div>
+</body>
+</html>
